@@ -26,6 +26,10 @@ class Test_Login(unittest.TestCase):
         driver = self.driver
         LoginPage().enter_credential(driver, self.__user, self.__password)
 
+    def test3_login_click(self):
+        driver = self.driver
+        LoginPage().enter_credential(driver, self.__user, self.__password)
+
     @classmethod
     def tearDownClass(cls):
         cls.driver.quit()

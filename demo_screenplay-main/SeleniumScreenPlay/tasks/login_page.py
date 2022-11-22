@@ -23,3 +23,12 @@ class LoginPage:
             SendKeys().send_text(driver, LoginUi().input_password, password)
         except Exception as inst:
             print("Error: insert credential", inst)
+
+    def login(self, driver: webdriver, user, password):
+        try:
+            Get().get(driver, LoginUi.base_url)
+            driver.maximize_window()
+            SendKeys().send_text(driver, LoginUi().input_user, user)
+            SendKeys().send_text(driver, LoginUi().input_password, password)
+        except Exception as inst:
+            print("Error: insert credential", inst)
